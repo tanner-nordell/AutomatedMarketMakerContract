@@ -70,4 +70,3 @@ def ownerWithdraw():
     #Your code here
     self.tokenA.transfer(self.owner, self.tokenAQty)
     self.tokenB.transfer(self.owner, self.tokenBQty)
-    #self.destruct(self.owner)
