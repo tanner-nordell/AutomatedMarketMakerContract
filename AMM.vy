@@ -44,8 +44,7 @@ def tradeTokens(sell_token: address, sell_quantity: uint256):
 
     #case 1: selling A for B
     if sell_token == self.tokenA.address:
-        #transfer tokens to sell from contract to liquidity pool
-        self.tokenA.transferFrom(msg.sender, self, sell_quantity)
+        self.tokenA.transferFrom(msg.sender, self, sell_quantity)#transfer tokens to sell from contract to liquidity pool
         #calculate new totals for A and B
         new_total_A_tokens: uint256 = self.tokenAQty + sell_quantity
         new_total_B_tokens: uint256 = self.invariant / new_total_A_tokens
