@@ -61,7 +61,7 @@ def tradeTokens(sell_token: address, sell_quantity: uint256):
 		new_total_A_tokens: uint256 = self.invariant / new_total_B_tokens
 		self.tokenA.transfer(msg.sender, self.tokenAQty - new_total_A_tokens)
 		self.tokenBQty = new_total_B_tokens
-    	self.tokenAQty = new_total_A_tokens
+		self.tokenAQty = new_total_A_tokens
 
 
 # Owner can withdraw their funds and destroy the market maker
